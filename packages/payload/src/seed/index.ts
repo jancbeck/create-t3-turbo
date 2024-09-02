@@ -1,9 +1,10 @@
 import { getPayload } from "payload";
-import config from "@payload-config";
+
+import config from "../payload.config";
 import { seedUsers } from "./collections/users";
 
 async function run() {
-  const payload = await getPayload({config});
+  const payload = await getPayload({ config });
 
   try {
     const isSeeded =
