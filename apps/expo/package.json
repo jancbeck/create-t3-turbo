@@ -2,7 +2,6 @@
   "name": "@acme/expo",
   "version": "0.1.0",
   "private": true,
-  "type": "module",
   "main": "index.ts",
   "scripts": {
     "clean": "git clean -xdf .cache .expo .turbo android ios node_modules",
