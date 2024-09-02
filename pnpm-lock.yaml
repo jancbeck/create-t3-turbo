@@ -371,6 +371,9 @@ importers:
       eslint:
         specifier: 'catalog:'
         version: 9.9.1(jiti@1.21.6)
+      payload:
+        specifier: beta
+        version: 3.0.0-beta.97(graphql@16.9.0)(monaco-editor@0.38.0)(react-dom@19.0.0-rc-fb9a90fa48-20240614(react@18.3.1))(react@18.3.1)(typescript@5.5.4)
       prettier:
         specifier: 'catalog:'
         version: 3.3.3
@@ -10963,6 +10966,13 @@ snapshots:
       react: 19.0.0-rc-06d0b89e-20240801
       react-dom: 19.0.0-rc-06d0b89e-20240801(react@19.0.0-rc-06d0b89e-20240801)
 
+  '@monaco-editor/react@4.6.0(monaco-editor@0.38.0)(react-dom@19.0.0-rc-fb9a90fa48-20240614(react@18.3.1))(react@18.3.1)':
+    dependencies:
+      '@monaco-editor/loader': 1.4.0(monaco-editor@0.38.0)
+      monaco-editor: 0.38.0
+      react: 18.3.1
+      react-dom: 19.0.0-rc-fb9a90fa48-20240614(react@18.3.1)
+
   '@monaco-editor/react@4.6.0(monaco-editor@0.38.0)(react-dom@19.0.0-rc-fb9a90fa48-20240614(react@19.0.0-rc-06d0b89e-20240801))(react@19.0.0-rc-06d0b89e-20240801)':
     dependencies:
       '@monaco-editor/loader': 1.4.0(monaco-editor@0.38.0)
@@ -16426,6 +16436,41 @@ snapshots:
   payload@3.0.0-beta.97(graphql@16.9.0)(monaco-editor@0.38.0)(react-dom@19.0.0-rc-06d0b89e-20240801(react@19.0.0-rc-06d0b89e-20240801))(react@19.0.0-rc-06d0b89e-20240801)(typescript@5.5.4):
     dependencies:
       '@monaco-editor/react': 4.6.0(monaco-editor@0.38.0)(react-dom@19.0.0-rc-06d0b89e-20240801(react@19.0.0-rc-06d0b89e-20240801))(react@19.0.0-rc-06d0b89e-20240801)
+      '@next/env': 15.0.0-rc.0
+      '@payloadcms/translations': 3.0.0-beta.97
+      '@types/busboy': 1.5.4
+      ajv: 8.14.0
+      bson-objectid: 2.0.4
+      ci-info: 4.0.0
+      console-table-printer: 2.11.2
+      dataloader: 2.2.2
+      deepmerge: 4.3.1
+      file-type: 17.1.6
+      find-up: 7.0.0
+      get-tsconfig: 4.7.6
+      graphql: 16.9.0
+      http-status: 1.6.2
+      image-size: 1.1.1
+      json-schema-to-typescript: 15.0.1
+      jsonwebtoken: 9.0.1
+      minimist: 1.2.8
+      pino: 9.3.1
+      pino-pretty: 11.2.1
+      pluralize: 8.0.0
+      sanitize-filename: 1.6.3
+      scmp: 2.1.0
+      ts-essentials: 7.0.3(typescript@5.5.4)
+      tsx: 4.17.0
+      uuid: 10.0.0
+    transitivePeerDependencies:
+      - monaco-editor
+      - react
+      - react-dom
+      - typescript
+
+  payload@3.0.0-beta.97(graphql@16.9.0)(monaco-editor@0.38.0)(react-dom@19.0.0-rc-fb9a90fa48-20240614(react@18.3.1))(react@18.3.1)(typescript@5.5.4):
+    dependencies:
+      '@monaco-editor/react': 4.6.0(monaco-editor@0.38.0)(react-dom@19.0.0-rc-fb9a90fa48-20240614(react@18.3.1))(react@18.3.1)
       '@next/env': 15.0.0-rc.0
       '@payloadcms/translations': 3.0.0-beta.97
       '@types/busboy': 1.5.4

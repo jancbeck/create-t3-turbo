@@ -2,8 +2,7 @@ import type { Config } from "payload";
 import { postgresAdapter } from "@payloadcms/db-postgres";
 import { buildConfig, getPayload as getPayloadPromise } from "payload";
 
-import { Posts } from "./collections/Posts";
-import { Users } from "./collections/Users";
+import { Posts, Users } from "./collections";
 import { env } from "./env";
 
 // necessary so that consumers of this package can infer types of the Payload config

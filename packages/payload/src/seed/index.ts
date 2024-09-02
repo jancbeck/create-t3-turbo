@@ -1,4 +1,4 @@
-import { getPayload } from "@acme/payload";
+import { getPayload } from "../index";
 
 import { seedUsers } from "./collections/users";
 
