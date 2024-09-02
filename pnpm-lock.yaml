@@ -343,6 +343,9 @@ importers:
       '@trpc/server':
         specifier: ^11.0.0-rc.466
         version: 11.0.0-rc.485
+      payload:
+        specifier: beta
+        version: 3.0.0-beta.97(graphql@16.9.0)(monaco-editor@0.38.0)(react-dom@19.0.0-rc-fb9a90fa48-20240614(react@18.3.1))(react@18.3.1)(typescript@5.5.4)
       react:
         specifier: ^18.3.1 || ^19.0.0-rc-06d0b89e-20240801
         version: 18.3.1
@@ -371,9 +374,6 @@ importers:
       eslint:
         specifier: 'catalog:'
         version: 9.9.1(jiti@1.21.6)
-      payload:
-        specifier: beta
-        version: 3.0.0-beta.97(graphql@16.9.0)(monaco-editor@0.38.0)(react-dom@19.0.0-rc-fb9a90fa48-20240614(react@18.3.1))(react@18.3.1)(typescript@5.5.4)
       prettier:
         specifier: 'catalog:'
         version: 3.3.3

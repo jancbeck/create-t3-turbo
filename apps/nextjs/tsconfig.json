@@ -5,8 +5,7 @@
     "jsx": "preserve",
     "baseUrl": ".",
     "paths": {
-      "~/*": ["./src/*"],
-      "@payload-config": ["./src/payload.config.ts"]
+      "~/*": ["./src/*"]
     },
     "plugins": [{ "name": "next" }],
     "module": "esnext"
