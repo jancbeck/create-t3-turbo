@@ -2,6 +2,7 @@
   "name": "@acme/expo",
   "version": "0.1.0",
   "private": true,
+  "type": "module",
   "main": "index.ts",
   "scripts": {
     "clean": "git clean -xdf .cache .expo .turbo android ios node_modules",
@@ -22,6 +23,7 @@
     "@bacons/text-decoder": "^0.0.0",
     "@expo/metro-config": "^0.18.11",
     "@expo/metro-runtime": "~3.2.3",
+    "@expo/server": "^0.4.4",
     "@t3-oss/env-core": "catalog:",
     "expo": "~51.0.31",
     "expo-constants": "~16.0.2",
@@ -54,6 +56,7 @@
     "@babel/runtime": "^7.25.0",
     "@reactioncommerce/babel-remove-es-create-require": "^1.0.0",
     "@types/babel__core": "^7.20.5",
+    "@types/node": "catalog:",
     "@types/react": "catalog:react18",
     "babel-plugin-transform-import-meta": "^2.2.1",
     "dotenv-cli": "catalog:",

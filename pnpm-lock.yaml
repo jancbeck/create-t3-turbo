@@ -134,6 +134,9 @@ importers:
       '@expo/metro-runtime':
         specifier: ~3.2.3
         version: 3.2.3(react-native@0.75.2(@babel/core@7.25.2)(@babel/preset-env@7.25.4(@babel/core@7.25.2))(@types/react@18.3.4)(react@18.3.1)(typescript@5.5.4))
+      '@expo/server':
+        specifier: ^0.4.4
+        version: 0.4.4(typescript@5.5.4)
       '@t3-oss/env-core':
         specifier: 'catalog:'
         version: 0.11.1(typescript@5.5.4)(zod@3.23.8)
@@ -225,6 +228,9 @@ importers:
       '@types/babel__core':
         specifier: ^7.20.5
         version: 7.20.5
+      '@types/node':
+        specifier: 'catalog:'
+        version: 20.16.1
       '@types/react':
         specifier: catalog:react18
         version: 18.3.4
@@ -2076,7 +2082,7 @@ packages:
 
   '@expo/bunyan@4.0.1':
     resolution: {integrity: sha512-+Lla7nYSiHZirgK+U/uYzsLv/X+HaJienbD5AKX1UQZHYfWaP+9uuQluRB4GrEVWF0GZ7vEVp/jzaOT9k/SQlg==}
-    engines: {'0': node >=0.10.0}
+    engines: {node: '>=0.10.0'}
 
   '@expo/cli@0.18.29':
     resolution: {integrity: sha512-X810C48Ss+67RdZU39YEO1khNYo1RmjouRV+vVe0QhMoTe8R6OA3t+XYEdwaNbJ5p/DJN7szfHfNmX2glpC7xg==}
