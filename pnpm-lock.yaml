@@ -628,11 +628,7 @@ importers:
         specifier: 'catalog:'
         version: 5.5.4
 
-  tooling/typescript:
-    dependencies:
-      '@types/node':
-        specifier: 'catalog:'
-        version: 20.16.1
+  tooling/typescript: {}
 
 packages:
 
