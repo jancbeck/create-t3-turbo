@@ -75,5 +75,10 @@
         "react-native-screens@~3.31.1"
       ]
     }
+  },
+  "pnpm": {
+    "patchedDependencies": {
+      "@expo/server@0.4.4": "patches/@expo__server@0.4.4.patch"
+    }
   }
 }
