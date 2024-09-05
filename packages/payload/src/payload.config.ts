@@ -1,3 +1,5 @@
+import path from "path";
+import { fileURLToPath } from "url";
 import type { Config } from "payload";
 import { postgresAdapter } from "@payloadcms/db-postgres";
 import { buildConfig } from "payload";
@@ -7,6 +9,9 @@ import { env } from "./env";
 
 // necessary so that consumers of this package can infer types of the Payload config
 export * from "./payload-types";
+
+const filename = fileURLToPath(import.meta.url);
+const dirname = path.dirname(filename);
 
 const payloadConfig = {
   cors: "*",
@@ -23,6 +28,10 @@ const payloadConfig = {
   plugins: [
     // storage-adapter-placeholder
   ],
+  typescript: {
+    autoGenerate: env.NODE_ENV === "development",
+    outputFile: path.resolve(dirname, "payload-types.ts"),
+  },
 } satisfies Config;
 
 const config = buildConfig(payloadConfig);

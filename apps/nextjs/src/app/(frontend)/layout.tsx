@@ -8,7 +8,7 @@ import { Toaster } from "@acme/ui/toast";
 
 import { TRPCReactProvider } from "~/trpc/react";
 
-import "~/app/globals.css";
+import "./globals.css";
 
 import { env } from "~/env";
 
