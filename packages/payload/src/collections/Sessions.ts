@@ -17,8 +17,7 @@ export const Sessions: CollectionConfig = {
     },
     {
       name: "expires",
-      type: "date",
-      admin: { date: { pickerAppearance: "dayAndTime" } },
+      type: "number",
       required: false,
     },
   ],
