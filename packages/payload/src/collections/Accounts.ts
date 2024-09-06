@@ -11,7 +11,7 @@ export const Accounts: CollectionConfig = {
     //   },
     // },
     {
-      name: "userId",
+      name: "user",
       type: "relationship",
       relationTo: "customers",
       required: true,
@@ -46,7 +46,7 @@ export const Accounts: CollectionConfig = {
     },
     {
       name: "accessTokenExpires",
-      type: "date",
+      type: "number",
       required: false,
     },
     {
