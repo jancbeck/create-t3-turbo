@@ -20,8 +20,7 @@ export const Customers: CollectionConfig = {
     },
     {
       name: "emailVerified",
-      type: "date",
-      admin: { date: { pickerAppearance: "dayAndTime" } },
+      type: "number",
       required: false,
     },
     {
