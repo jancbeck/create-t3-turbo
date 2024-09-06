@@ -55,6 +55,7 @@ export const authConfig = async () => {
   // const outputPath = path.join(__dirname, "..", "payload-db-inspection.json");
   // await fs.writeFile(outputPath, output, "utf8");
   return {
+    debug: true,
     adapter: PayloadAdapter(payload),
     ...(!isSecureContext
       ? {
