@@ -5,7 +5,9 @@ import { protectedProcedure, publicProcedure } from "../trpc";
 
 export const postRouter = {
   all: publicProcedure.query(async ({ ctx }) => {
-    const posts = await ctx.payload.find({
+    const posts = await (
+      await ctx.payload
+    ).find({
       collection: "posts",
       limit: 10,
     });
@@ -15,7 +17,9 @@ export const postRouter = {
   byId: publicProcedure
     .input(z.object({ id: z.string() }))
     .query(async ({ ctx, input }) => {
-      const post = await ctx.payload.findByID({
+      const post = await (
+        await ctx.payload
+      ).findByID({
         collection: "posts",
         id: input.id,
       });
@@ -25,7 +29,9 @@ export const postRouter = {
   create: protectedProcedure
     .input(z.object({ title: z.string(), content: z.string() }))
     .mutation(async ({ ctx, input }) => {
-      return await ctx.payload.create({
+      return await (
+        await ctx.payload
+      ).create({
         collection: "posts",
         data: input,
       });
@@ -34,7 +40,9 @@ export const postRouter = {
   delete: protectedProcedure
     .input(z.string())
     .mutation(async ({ ctx, input }) => {
-      return await ctx.payload.delete({
+      return await (
+        await ctx.payload
+      ).delete({
         collection: "posts",
         id: input,
       });

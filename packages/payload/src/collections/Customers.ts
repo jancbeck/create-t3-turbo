@@ -6,27 +6,48 @@ export const Customers: CollectionConfig = {
     useAsTitle: "email",
   },
   fields: [
-    {
-      name: "name",
-      type: "text",
-      required: false,
-    },
+    { name: "name", type: "text" },
+    { name: "imageUrl", type: "text" },
     {
       name: "email",
       type: "email",
       unique: true,
-      required: false,
+      required: true,
       index: true,
     },
+    { name: "emailVerified", type: "date" },
     {
-      name: "emailVerified",
-      type: "number",
-      required: false,
+      name: "accounts",
+      type: "array",
+      saveToJWT: false,
+      fields: [
+        {
+          type: "row",
+          fields: [
+            { name: "provider", type: "text", admin: { readOnly: true } },
+            {
+              name: "providerAccountId",
+              type: "text",
+              admin: { readOnly: true },
+            },
+          ],
+        },
+      ],
     },
     {
-      name: "image",
-      type: "text",
-      required: false,
+      name: "verificationTokens",
+      type: "array",
+      saveToJWT: false,
+      fields: [
+        {
+          type: "row",
+          fields: [
+            { name: "identifier", type: "text", admin: { readOnly: true } },
+            { name: "token", type: "text", admin: { readOnly: true } },
+            { name: "expires", type: "date", admin: { readOnly: true } },
+          ],
+        },
+      ],
     },
   ],
 };

@@ -7,6 +7,9 @@
     ".": {
       "default": "./src/payload.config.ts"
     },
+    "./types": {
+      "default": "./src/payload-types.ts"
+    },
     "./env": "./src/env.ts"
   },
   "license": "MIT",

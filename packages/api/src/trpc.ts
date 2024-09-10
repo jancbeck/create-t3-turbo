@@ -43,8 +43,10 @@ export const createTRPCContext = async (opts: {
   headers: Headers;
   session: Session | null;
 }) => {
-  const payload = await getPayload({ config });
-  const { user, permissions } = await payload.auth({ headers: opts.headers });
+  const payload = getPayload({ config });
+  const { user, permissions } = await (
+    await payload
+  ).auth({ headers: opts.headers });
   const authToken = opts.headers.get("Authorization") ?? null;
   const session = await isomorphicGetSession(opts.headers);
 
