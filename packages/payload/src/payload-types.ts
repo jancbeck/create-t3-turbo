@@ -15,7 +15,6 @@ export interface Config {
     posts: Post;
     customers: Customer;
     sessions: Session;
-    accounts: Account;
     'payload-preferences': PayloadPreference;
     'payload-migrations': PayloadMigration;
   };
@@ -81,9 +80,24 @@ export interface Post {
 export interface Customer {
   id: string;
   name?: string | null;
-  email?: string | null;
+  imageUrl?: string | null;
+  email: string;
   emailVerified?: string | null;
-  image?: string | null;
+  accounts?:
+    | {
+        provider?: string | null;
+        providerAccountId?: string | null;
+        id?: string | null;
+      }[]
+    | null;
+  verificationTokens?:
+    | {
+        identifier?: string | null;
+        token?: string | null;
+        expires?: string | null;
+        id?: string | null;
+      }[]
+    | null;
   updatedAt: string;
   createdAt: string;
 }
@@ -93,30 +107,9 @@ export interface Customer {
  */
 export interface Session {
   id: string;
-  sessionToken?: string | null;
-  userId: string | Customer;
+  user: string | Customer;
+  sessionToken: string;
   expires?: string | null;
-  updatedAt: string;
-  createdAt: string;
-}
-/**
- * This interface was referenced by `Config`'s JSON-Schema
- * via the `definition` "accounts".
- */
-export interface Account {
-  id: string;
-  userId: string | Customer;
-  type: 'oauth' | 'oidc' | 'email' | 'webauthn';
-  provider: string;
-  providerAccountId: string;
-  refreshToken?: string | null;
-  accessToken?: string | null;
-  accessTokenExpires?: string | null;
-  expires_at?: number | null;
-  token_type?: string | null;
-  scope?: string | null;
-  id_token?: string | null;
-  session_state?: string | null;
   updatedAt: string;
   createdAt: string;
 }

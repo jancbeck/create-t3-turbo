@@ -4,20 +4,23 @@ export const Sessions: CollectionConfig = {
   slug: "sessions",
   fields: [
     {
-      name: "sessionToken",
-      type: "text",
-      required: false,
-      index: true,
-    },
-    {
-      name: "userId",
+      name: "user",
       type: "relationship",
       relationTo: "customers",
       required: true,
+      admin: { readOnly: false },
+    },
+    {
+      name: "sessionToken",
+      type: "text",
+      required: true,
+      index: true,
+      admin: { readOnly: false },
     },
     {
       name: "expires",
-      type: "number",
+      type: "date",
+      admin: { readOnly: false, date: { pickerAppearance: "dayAndTime" } },
       required: false,
     },
   ],

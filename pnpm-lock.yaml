@@ -419,12 +419,12 @@ importers:
       '@acme/payload':
         specifier: workspace:*
         version: link:../payload
+      '@acme/payload-auth':
+        specifier: workspace:*
+        version: link:../payload-auth
       '@auth/core':
         specifier: 0.34.2
         version: 0.34.2
-      '@auth/drizzle-adapter':
-        specifier: ^1.4.2
-        version: 1.4.2
       '@t3-oss/env-nextjs':
         specifier: ^0.11.0
         version: 0.11.1(typescript@5.5.4)(zod@3.23.8)
@@ -487,6 +487,37 @@ importers:
       dotenv-cli:
         specifier: 'catalog:'
         version: 7.4.2
+      eslint:
+        specifier: 'catalog:'
+        version: 9.9.1(jiti@1.21.6)
+      prettier:
+        specifier: 'catalog:'
+        version: 3.3.3
+      typescript:
+        specifier: 'catalog:'
+        version: 5.5.4
+
+  packages/payload-auth:
+    dependencies:
+      '@acme/payload':
+        specifier: workspace:*
+        version: link:../payload
+      '@auth/core':
+        specifier: 0.34.2
+        version: 0.34.2
+      payload:
+        specifier: 'catalog:'
+        version: 3.0.0-beta.99(graphql@16.9.0)(monaco-editor@0.51.0)(react-dom@19.0.0-rc-06d0b89e-20240801(react@19.0.0-rc-06d0b89e-20240801))(react@19.0.0-rc-06d0b89e-20240801)(typescript@5.5.4)
+    devDependencies:
+      '@acme/eslint-config':
+        specifier: workspace:*
+        version: link:../../tooling/eslint
+      '@acme/prettier-config':
+        specifier: workspace:*
+        version: link:../../tooling/prettier
+      '@acme/tsconfig':
+        specifier: workspace:*
+        version: link:../../tooling/typescript
       eslint:
         specifier: 'catalog:'
         version: 9.9.1(jiti@1.21.6)
@@ -716,9 +747,6 @@ packages:
         optional: true
       nodemailer:
         optional: true
-
-  '@auth/drizzle-adapter@1.4.2':
-    resolution: {integrity: sha512-rqukaT9CeWB8VOt6g2bQ6uYMHVOQIYCBkzddZXWshi8aqwLABatpRWAc+pehpcMDn0RSW/uvKMs7tkON+Bho9Q==}
 
   '@babel/code-frame@7.10.4':
     resolution: {integrity: sha512-vG6SvB6oYEhvgisZNFRmRCUkLz11c7rp+tbNTynGqc6mS1d5ATd/sGyV6W0KZZnXRKMTzZDRgQT3Ou9jhpAfUg==}
@@ -9004,14 +9032,6 @@ snapshots:
       oauth4webapi: 2.12.1
       preact: 10.11.3
       preact-render-to-string: 5.2.3(preact@10.11.3)
-
-  '@auth/drizzle-adapter@1.4.2':
-    dependencies:
-      '@auth/core': 0.34.2
-    transitivePeerDependencies:
-      - '@simplewebauthn/browser'
-      - '@simplewebauthn/server'
-      - nodemailer
 
   '@babel/code-frame@7.10.4':
     dependencies:

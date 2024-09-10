@@ -4,7 +4,7 @@ import type { Config } from "payload";
 import { postgresAdapter } from "@payloadcms/db-postgres";
 import { buildConfig } from "payload";
 
-import { Accounts, Admins, Customers, Posts, Sessions } from "./collections";
+import { Admins, Customers, Posts, Sessions } from "./collections";
 import { env } from "./env";
 
 // necessary so that consumers of this package can infer types of the Payload config
@@ -18,7 +18,7 @@ const payloadConfig = {
   admin: {
     user: Admins.slug,
   },
-  collections: [Admins, Posts, Customers, Sessions, Accounts],
+  collections: [Admins, Posts, Customers, Sessions],
   secret: env.PAYLOAD_SECRET,
   db: postgresAdapter({
     idType: "uuid",
